@@ -57,3 +57,38 @@
   color: #dc2626;
   font-size: 14px;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 24px;
+    border-radius: 10px;
+  }
+
+  .login-card h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .login-input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .login-button {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .error-text {
+    font-size: 13px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .login-card {
+    width: 80%;
+  }
+}

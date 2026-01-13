@@ -34,24 +34,24 @@ const Poll = ({ user }) => {
   return (
     <div style={{ padding: "20px" }}>
       <h2>Vote for Your Favourite Dishes</h2>
-      <p>Select up to 3 dishes and rank them (1 = 1st, 2 = 2nd, 3 = 3rd)</p>
+      <p>Select up to 3 dishes and rank them (1= 1st Rank, 2st = 2nd Rank, 3rd = 3rd Rank)</p>
       <div className="dish-grid">
-        {dishes.map((dish) => (
-          <div className="dish-card" key={dish.id}>
-            <img src={dish.image} alt={dish.dishName} />
+        {dishes?.map((dish) => (
+          <div className="dish-card" key={dish?.id}>
+            <img src={dish?.image} alt={dish?.dishName} />
 
             <div className="dish-content">
-              <h4>{dish.dishName}</h4>
-              <p>{dish.description}</p>
+              <h4>{dish?.dishName}</h4>
+              <p>{dish?.description}</p>
             </div>
 
             <div className="rank-container">
-              {[1, 2, 3].map((rank) => (
+              {[1, 2, 3]?.map((rank) => (
                 <button
                   className={`rank-btn ${
-                    votes[dish.id] === rank ? "active" : ""
+                    votes[dish?.id] === rank ? "active" : ""
                   }`}
-                  onClick={() => handleRankChange(dish.id, rank)}
+                  onClick={() => handleRankChange(dish?.id, rank)}
                 >
                   {rank}
                 </button>
